@@ -1809,8 +1809,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 /* Лента слайдов */
-
-/* @media (max-width: 880px) {
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 9%;
+  -webkit-transform: translateX(-9%);
+          transform: translateX(-9%);
+}
+@media (max-width: 880px) {
   .slick-track {
     margin-left: 1.5%;
     -webkit-transform: translateX(-1.5%);
@@ -1837,37 +1847,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translateX(-4%);
             transform: translateX(-4%);
   }
-} */
-@supports not (-webkit-touch-callout: none) {
-   /* CSS for other than iOS devices */ 
-  .slick-track {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-left: 9%;
-    -webkit-transform: translateX(-9%);
-            transform: translateX(-9%);
-  }
 }
-
-@supports (-webkit-touch-callout: none) {
-   /* CSS specific to iOS devices */
-  .slick-track {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-left: 18%;
-    -webkit-transform: translateX(-18%);
-            transform: translateX(-18%);
-  }
-}
-
 
 .slider {
   position: relative;
