@@ -1849,55 +1849,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */
-  @media (max-width: 767px) {
-    .slick-track {
-      margin-left: 24%;
-      -webkit-transform: translateX(-24%);
-              transform: translateX(-24%);
-    }
-  }
-  @media (max-width: 600px) {
-    .slick-track {
-      margin-left: 7%;
-      -webkit-transform: translateX(-7%);
-              transform: translateX(-7%);
-    }
-  }
-  @media (max-width: 350px) {
-    .slick-track {
-      margin-left: 8%;
-      -webkit-transform: translateX(-8%);
-              transform: translateX(-8%);
-    }
+   /* CSS specific to iOS devices */
+  .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 18%;
+    -webkit-transform: translateX(-18%);
+            transform: translateX(-18%);
   }
 }
-
-@supports not (-webkit-touch-callout: none) {
-  /* CSS for other than iOS devices */
-  @media (max-width: 767px) {
-    .slick-track {
-      margin-left: 12%;
-      -webkit-transform: translateX(-12%);
-              transform: translateX(-12%);
-    }
-  }
-  @media (max-width: 600px) {
-    .slick-track {
-      margin-left: 3.5%;
-      -webkit-transform: translateX(-3.5%);
-              transform: translateX(-3.5%);
-    }
-  }
-  @media (max-width: 350px) {
-    .slick-track {
-      margin-left: 4%;
-      -webkit-transform: translateX(-4%);
-              transform: translateX(-4%);
-    }
-  }
-}
-
 .slider {
   position: relative;
 }
